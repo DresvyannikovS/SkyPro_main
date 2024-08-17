@@ -1,0 +1,439 @@
+@import 'style';
+
+.font   {
+    font-family: "Poppins";
+}
+
+.korzina-top    {
+    background-image: url(imgkorzina/header.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 400px;
+}
+
+.ck-top-content {
+    color: rgb(255, 255, 255);
+}
+
+.ck-title  {
+    margin-top: 128px;
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 70px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.goods  {
+    transition: all .5s;
+    padding: 5px;
+}
+
+.goods:hover    {
+    transform: scale(1.05);
+    box-shadow: 0 0 5px #ccc;
+}
+
+.buy    {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin-top: 64px;
+    gap: 33px;
+
+    &-content   {
+        grid-column: span 8;
+        height: 198px;
+
+        &-text  {
+        display: flex;
+        justify-content: space-between;    
+        }
+
+        &-section   {
+          display: grid;
+          grid-template-columns: repeat(8, 1fr);
+          border-top: 0.5px solid rgb(202, 205, 216);
+          margin-top: 14px;
+          padding-top: 25px;
+          gap: 32px;
+    
+
+          &-img {
+            grid-column: span 2;
+            background-image: url(imgkorzina/buy2.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+
+          &-img2 {
+            grid-column: span 2;
+            background-image: url(imgkorzina/buy1.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+
+          &-text    {
+            max-width: 276px;
+            grid-column: span 5;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+
+            &-title {
+                color: $black-color;
+                font-family: Montserrat;
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 29px;
+                letter-spacing: 0px;
+                text-align: left;  
+            }
+
+            &-text  {
+                color: rgb(136, 136, 136);
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 17px;
+                text-align: left;  
+            }
+
+            &-price {
+                color: $black-color;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 20px;
+                text-align: left; 
+                width: 170px; 
+            }
+
+            &-nav   {
+                color: $black-color;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 20px;
+                text-align: left;   
+            }
+          }
+
+          &-input   {
+            grid-column: span 1;
+
+            &-input2 {
+                border-radius: 6px;
+                background: rgb(247, 246, 246); 
+                color: $black-color;
+                font-family: "Poppins";
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 210%;
+                text-align: center; 
+                width: 71px;
+                height: 51px; 
+            }
+          }
+        }
+    }
+
+    &-form  {
+        grid-column: span 4;
+        height: 556px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 42px;
+        border-radius: 20px;
+        background: rgb(247, 246, 246);
+        
+        &-title {
+            color: $black-color;
+            font-family: "poppins";
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 36px;
+            letter-spacing: 0px;
+            text-align: center; 
+            margin-bottom: 35px; 
+        }
+
+        &-input {
+            width: 288px;
+            color: rgb(0, 0, 0);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+            text-align: left;
+            border: none;
+            border-bottom: 1px solid rgb(202, 205, 216);
+            background: rgb(247, 246, 246);
+            margin-bottom: 40px;    
+        }
+
+        &-input::placeholder    {
+            color: rgb(0, 0, 0);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;   
+        }
+
+        &-title2    {
+            color: rgb(0, 0, 0);
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 29px;
+            text-align: center;
+            margin-bottom: 18px;
+        }
+
+        &-button    {
+            border: 1px solid rgb(4, 4, 4);
+            border-radius: 20px;
+            width: 290px;
+            height: 41px;
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: center;
+        }
+
+    }
+
+    &-buttons    {
+        display: flex;
+        justify-content: start;
+        gap: 7px;
+        margin-top: 50px;
+
+        &-button    {
+            border: 1px solid black;
+            border-radius: 50px;
+            color: $black-color;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+            text-align: center; 
+            width: 200px;
+            height: 37px; 
+            background-color: #fff;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .center  {
+        padding-left: calc(50% - 786px/2);
+        padding-right: calc(50% - 786px/2);
+       } 
+
+    .buy    {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+
+        &-content   {
+            grid-column: span 8;
+            height: 198px;
+
+            .buy-buttons    {
+              .button-tablet    {
+                border-radius: 50px;
+                background: rgb(0, 0, 0);
+                color: rgb(255, 255, 255);
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 15px;
+                text-align: center;
+              }  
+            }
+        }
+    }
+
+    .goods-block    {
+        display: grid;
+        grid-template-columns: repeat(8,1fr);
+        gap: 29px;
+
+        .goods {
+            grid-column: span 4;
+        }
+    }  
+
+    .footer-maintitle   {
+        display: none;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 833px) {
+    .center {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .goods-block    {
+        display: grid;
+        grid-template-columns: repeat(8,1fr);
+        gap: 29px;
+
+        .goods {
+            grid-column: span 4;
+        }
+    } 
+
+    .footer-maintitle {
+        display: none;
+     }  
+}
+
+@media (max-width: 767px) {
+
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    } 
+    
+    .header {
+        display: none;
+    }
+    
+    .header-mobile  {
+            display: block;
+            display: flex;
+            padding-top: 50px;
+            margin-bottom: 64px;
+            justify-content: space-between;
+            align-items: center;
+    
+            .logo   {
+                width: 99px;
+                height: 22px;
+            }
+    
+            .mobile-nav {
+                display: flex;
+                align-items: center;
+                gap: 35px;
+            }
+    }
+    
+    .ck-top-content {
+        justify-content: center;
+    
+        .ck-title   {
+            font-size: 48px;
+            font-weight: 600;
+            line-height: 59px;
+            text-align: center;   
+        }
+    }
+    
+    .buy {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 92x;
+        gap: 24px;
+    
+        &-content   {
+            grid-column: span 4;
+            height: 167px;
+    
+            &-text  {
+            display: none;   
+            } 
+
+            &-section   {
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                border-top: 0.5px solid rgb(202, 205, 216);
+                padding-top: 25px;
+                gap: 32px;
+          
+      
+                &-img {
+                 display: none;
+                }
+      
+                &-img2 {
+                  display: none;
+                }
+      
+                &-text    {
+                  grid-column: span 3;
+                  display: flex;
+                  flex-wrap: wrap;
+                  gap: 16px;
+      
+                  &-title {
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 22px;  
+                  }
+      
+                  &-text  {
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 15px; 
+                  }
+      
+                  &-price {
+                    font-size: 12px;
+                    font-weight: 500;
+                    line-height: 15px; 
+                  }
+      
+                  &-nav   {
+                      font-size: 16px;
+                      font-weight: 500;
+                      line-height: 20px;
+                      text-align: left;   
+                  }
+                }
+            }
+        }
+
+        &-form  {
+            grid-column: span 4;
+        }
+    }
+
+    .goods-block    {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+
+    } 
+    
+    .footer {
+        height: 364px;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 100px;
+        justify-content: center;
+    }
+    .footer-maintitle   {
+        display: none;
+    }
+
+    .form {
+       .footertext  {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 15px; 
+       } 
+
+       .footer-mail {
+        width: 268.1px;
+        height: 46px;
+        border-radius: 20px;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 18px;
+       }
+
+       .footerbutton    {
+
+       }
+    }
+    }
+

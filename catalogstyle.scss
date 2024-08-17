@@ -1,0 +1,223 @@
+@import 'style';
+
+.cat-top    {
+    background-image: url(imgcatalog/catlogo.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+}
+
+.catnav    {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    margin-top: 64px;
+
+    .nav-menu   {
+    
+        &-link  {
+            text-decoration: none;
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 32px;
+        }
+    }
+
+    &-select    {
+        width: 288px;
+        height: 41px;
+        box-sizing: border-box;
+        border: 1px solid rgb(196, 196, 196);
+        border-radius: 20px;
+        background: none;
+        padding-left: 14px;
+        padding-right: 14px;
+
+
+        &-value {
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: left;  
+        }
+  
+    }
+}
+
+.catalog    {
+    display:grid;
+    grid-template-columns:repeat(12, 1fr);
+    column-gap: 32px;
+    row-gap: 49px;
+    margin-bottom: 32px;
+
+    &-element   {
+        grid-column: span 4;
+        display: flex;
+        flex-direction: column;
+        align-items: start; 
+        transition: all .5s;
+        padding: 5px;
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 5px #ccc;
+        }
+
+        &-img   {
+            width: 100%;
+        }
+        
+        &-title {
+            margin-top: 10px;
+            margin-bottom: 8px;
+            color: rgb(0, 0, 0);
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 29px;
+            text-align: left;   
+        }
+
+        &-text  {
+            color: rgb(136, 136, 136);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+            letter-spacing: 0%;
+            text-align: left;
+            margin-bottom: 12px; 
+            max-width: 379px;   
+        }
+
+        &-price {
+            color: rgb(5, 5, 5);
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 29px;
+            text-align: left;   
+        }
+    }
+}
+
+.catalog-showmore   {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    text-decoration-line: underline;  
+}
+
+@media (max-width: 1024px)  {
+    .center  {
+     padding-left: calc(50% - 786px/2);
+     padding-right: calc(50% - 786px/2);
+    } 
+ 
+    .catalog {
+     display:grid;
+     grid-template-columns:repeat(8, 1fr);
+     &-element   {
+         grid-column: span 4;
+     }
+    }
+
+    .footer-maintitle {
+        display: none;
+     }  
+ }
+
+ @media (min-width: 767px) and (max-width: 833px) {
+    .center {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .goods-block    {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 29px;
+    }
+
+    .footer-maintitle {
+        display: none;
+     }  
+}
+
+@media (max-width: 767px) {
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    } 
+    
+    .header {
+        display: none;
+    }
+
+    .header-mobile  {
+        display: flex;
+        height: 77px;
+        margin-bottom: 64px;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo   {
+            width: 99px;
+            height: 22px;
+        }
+
+        .mobile-nav {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+        }
+    }
+
+    .catnav {
+     display: flex;
+     flex-wrap: wrap; 
+     gap: 16px;
+     margin-top: 32px;  
+    }
+
+    .catalog {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    .footer {
+        height: 364px;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 100px;
+        justify-content: center;
+    }
+    .footer-maintitle   {
+        display: none;
+    }
+
+    .form {
+       .footertext  {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 15px; 
+       } 
+
+       .footer-mail {
+        width: 268.1px;
+        height: 46px;
+        border-radius: 20px;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 18px;
+       }
+
+       .footerbutton    {
+
+       }
+    }
+}
+
+ 
