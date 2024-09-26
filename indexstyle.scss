@@ -87,7 +87,6 @@
 
 .for-block-element:hover    {
     transform: scale(1.05);
-    animation: kenburns-top 5s ease-out both;
 }
 
 .goods  {
@@ -104,9 +103,6 @@
     box-shadow: 0 0 5px #ccc;
 }
 
-.goods:hover .goods-img {
-    animation: kenburns-top 5s ease-out both;
-}
 
 .footerbutton   {
     animation: heartbeat 1.5s ease-in-out infinite forwards;

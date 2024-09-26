@@ -408,7 +408,6 @@ a {
 
 .for-block-element:hover {
   transform: scale(1.05);
-  animation: kenburns-top 5s ease-out both;
 }
 
 .goods {
@@ -423,10 +422,6 @@ a {
 .goods:hover {
   transform: scale(1.05);
   box-shadow: 0 0 5px #ccc;
-}
-
-.goods:hover .goods-img {
-  animation: kenburns-top 5s ease-out both;
 }
 
 .footerbutton {
